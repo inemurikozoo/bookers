@@ -1,0 +1,24 @@
+<!--レコードの一覧-->
+<h1>Books</h1>
+
+<%= @books.each do |book| %>
+
+    <p>Title</p>
+    
+
+
+
+
+
+<!--新規投稿-->
+<%= form_with model: Book.new do |f| %>
+
+    <h4>New Books</h4>
+    <label for="book_title">Title</label>
+    <%=f.text_field :title %>
+    <label for="book_body">Body</label>
+    <%=f.text_area :body %>
+    <%=f.submit 'Create Book' %>
+
+
+<% end %>
