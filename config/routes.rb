@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get '/' => 'homes#top'
+  get root to: 'homes#top'
   get 'books' => 'books#index'
   delete 'books/:id' => 'books#destroy', as: 'destroy_book'
   patch 'books/:id' => 'books#update', as: 'update_book'
